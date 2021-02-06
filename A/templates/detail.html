@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{todo.title}}</p>
+<hr>
+<p class="bg-success">{{ todo.body}}</p>
+<br>
+<small class='bg-info'>{{ todo.date }}</small>
+{% endblock content %}
