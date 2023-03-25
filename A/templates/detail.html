@@ -2,6 +2,7 @@
 
 {% block content %}
     <a href="{% url 'delete' todo.id %}" class="btn btn-danger mb-3">Delete</a>
+    <a href="{% url 'updated' todo.id %}" class="btn btn-info mb-3">Update</a>
     <p>{{todo.title}}</p>
     <hr>
     <p class="bg-success">{{ todo.body}}</p>
