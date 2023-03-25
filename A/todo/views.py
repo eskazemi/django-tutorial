@@ -3,6 +3,7 @@ from django.shortcuts import (
     redirect
 )
 from .models import Todo
+from django.contrib import messages
 
 
 def get_all(request):
@@ -23,4 +24,5 @@ def detail(request, _id: int):
 
 def delete(request, _id: int):
     Todo.objects.filter(id=_id).delete()
+    messages.success(request, "Delete Message successfully", 'success')
     return redirect("all_todo")
